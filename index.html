@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Любите ли вы программировать?</h2>
+    <input type="text" id="answer" placeholder="Введите да или нет">
+    <button onclick="checkAnswer()">Проверить</button>
+    <p id="result"></p>
+
+    <script>
+        //1.
+        let keyValue = 10;
+        let str = "123.45";
+        let bool = true;
+        const key_Value = 321.29;
+        var apple = 'apple';
+//2.
+let a = 2;
+let b = 3;
+console.log(a+b);
+console.log(a-b);
+console.log(a*b);
+console.log(a/b);
+console.log(a%b);
+
+alert(a+b);
+alert(a-b);
+alert(a*b);
+alert(a/b);
+alert(a%b);
+
+document.write(a+b + '<br/>');
+document.write(a-b + '<br/>');
+document.write(a*b + "<br/>");
+document.write(a/b + "<br/>");
+document.write(a%b + "<br/> <hr>");
+//3.
+let integer = 98;
+let strStr = "hello world!";
+let boolBool = true;
+let emptyValue = null;
+let notAssigned;
+console.log(typeof integer);
+console.log(typeof strStr);
+console.log(typeof boolBool);
+console.log(typeof emptyValue);
+console.log(typeof notAssigned);
+
+alert(typeof integer);
+alert(typeof strStr);
+alert(typeof boolBool);
+alert(typeof emptyValue);
+alert(typeof notAssigned);
+
+document.write(typeof integer + '<br/>');
+document.write(typeof strStr + '<br/>');
+document.write(typeof boolBool + "<br/>");
+document.write(typeof emptyValue + "<br/>");
+document.write(typeof notAssigned + "<br/> <hr>");
+//4.
+let name = 'Jurij';
+const age = 55;
+let lovesProgramming = true;
+
+alert(name);
+alert(age);
+alert(lovesProgramming);
+
+document.write(name + "<br/>");
+document.write(age + "<br/>");
+console.log(`Любите ли вы программировать?` + " " + lovesProgramming + "<br/>")
+document.write("Любите ли вы программировать?" + " " + lovesProgramming + "<br/> <hr>");
+
+   function checkAnswer() {
+            let answer = document.getElementById("answer").value.toLowerCase();
+            let lovesProgramming = (answer === "да");
+            document.getElementById("result").textContent = "Ответ: " + lovesProgramming;
+        }
+//5.
+let x = 6;
+let y = 14;
+let z = 4;
+
+console.log("Начальные значения:");
+console.log("x = " + x);
+console.log( "y = " + y);
+console.log("z = " + z);
+
+x = 10;
+console.log( "Переприсваивание 1: x = " + x );
+
+y = 38;
+console.log( "Переприсваивание 1: y = " + y );
+
+z = 62;
+console.log( "Переприсваивание 1: z = " + z );
+
+x = y;
+console.log( "Переприсваивание 2: x = " + x );
+
+y = x;
+console.log( "Переприсваивание 2: y = " + y );
+
+z = y + 2;
+console.log( "Переприсваивание 3: z = " + z );
+
+x = z;
+console.log( "Переприсваивание 4: x = " + x );
+
+// - Определите, последовательность работы операторов.
+// - Выведите результаты каждого шага вычислений в консоли.
+
+ x = 6;
+ y = 14;
+ z = 4;
+
+  // 1. x += y - x++ * z;
+// Приоритет операций: сначала x++ (постфиксный инкремент), затем x * z, потом y - результат, затем x += результат.
+
+    console.log(`Начальные значения: x = ${x}, y = ${y}, z = ${z}`);
+
+//  Постфиксный инкремент x++: Сначала используется текущее значение x (6), а затем x увеличивается на 1 (становится 7).
+// Умножение x * z: После инкремента 6 * 4 = 24.
+// Вычитание y - 24: 14 - 24 = -10.
+// Присваивание x += -10: x (7) + (-10) = -3.
+            
+        let step1_x = x++;
+        let step1_result = y - step1_x * z;
+        x += step1_result; 
+        // x становится x + (y - результат1)
+        console.log(`После x += y - x++ * z; x = ${x}, y = ${y}, z = ${z}`);
+
+
+//2.   z = --x - y * 5;
+  // Приоритет операций: сначала --x (префиксный декремент), затем y * 5, потом вычитание.
+
+  console.log(`Начальные значения перед следующим шагом: x = ${x}, y = ${y}, z = ${z}`);
+
+//   Префиксный декремент --x: x уменьшается на 1 до -4.
+// Умножение y * 5: 14 * 5 = 70.
+// Вычитание -4 - 70: -4 - 70 = -74.
+// Присваивание z = -74.   
+ 
+      let step2_x = --x;
+      let step2_result = step2_x - y * 5;
+      z = step2_result;
+
+  console.log(`После z = --x - y * 5; x = ${x}, y = ${y}, z = ${z}`);
+
+
+//3. y /= x + 5 % z;
+// Приоритет операций: сначала 5 % z, затем x + результат, затем y делится на результат.
+
+console.log(`Начальные значения перед следующим шагом: x = ${x}, y = ${y}, z = ${z}`);
+
+// Остаток от деления 5 % z: Остаток от деления 5 на -74 равен 5.
+// Сложение x + 5: -4 + 5 = 1.
+// Деление y / 1: 14 / 1 = 14.
+// Присваивание y = 14.
+
+      let step3_mod = 5 % z;
+      let step3_result = x + step3_mod;
+      y /= step3_result;
+console.log(`После y /= x + 5 % z; x = ${x}, y = ${y}, z = ${z}`);
+
+// 4.  z - x++ + y * 5; 
+ // Приоритет операций: сначала y * 5, затем x++, затем z - результат.
+
+ console.log(`Начальные значения перед следующим шагом: x = ${x}, y = ${y}, z = ${z}`);
+
+//  Умножение y * 5: 14 * 5 = 70.
+// Постфиксный инкремент x++: Сначала используется текущее значение x (-4), затем x увеличивается до -3.
+// Вычитание (z - (-4) + 70): -74 - (-4) + 70 = -74 + 4 + 70 = 0.
+// Результат 0.
+        let step4_y = y * 5;
+        let step4_x = x++;
+        let step4_result = z - step4_x + step4_y;
+
+console.log(`После z - x++ + y * 5; x = ${x}, y = ${y}, z = ${z}`);
+
+// 5.  x = y - x++ * z; 
+// Приоритет операций: сначала x++ * z, затем y - результат.
+
+console.log(`Начальные значения перед следующим шагом: x = ${x}, y = ${y}, z = ${z}`);
+        
+// Постфиксный инкремент x++: Сначала используется текущее значение x (-3), затем x увеличивается до -2.
+// Умножение x * z: -3 * 0 = 0.
+// Вычитание y - 0: 14 - 0 = 14.
+// Присваивание x = 14.
+
+        let step5_x = x++;
+        let step5_mult = step5_x * z;
+        let step5_result = y - step5_mult;
+        x = step5_result;
+
+console.log(`После x = y - x++ * z; x = ${x}, y = ${y}, z = ${z}`);
+
+    </script>
+</body>
+</html>

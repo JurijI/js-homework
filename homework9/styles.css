@@ -1,0 +1,66 @@
+/* Стили для margin-div */
+#margin-div {
+    margin: 150px; /* Внешний отступ 150 пикселей */
+}
+
+/* Стили для секундомера */
+.stopwatch {
+    background-color: #90EE90; /* Фон зеленый */
+    padding: 20px; /* Внутренний отступ */
+    border-radius: 10px; /* Скругление углов */
+    text-align: center; /* Выравнивание текста по центру */
+    width: 300px; /* Ширина */
+    margin: 0 auto; /* Выравнивание по центру */
+}
+
+#time-display {
+    font-size: 2em; /* Размер шрифта */
+    margin-bottom: 20px; /* Нижний отступ */
+    background-color: #006400; /* Темно-зеленый фон */
+    color: #32CD32; /* Светло-зеленый цвет текста */
+    padding: 10px; /* Внутренний отступ */
+    border-radius: 0; /* Углы прямые */
+}
+
+button {
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    border: none; /* Без границ */
+    padding: 10px 20px; /* Внутренний отступ */
+    margin: 5px; /* Внешний отступ */
+    cursor: pointer; /* Курсор указатель */
+}
+
+button:hover {
+    background-color: #555; /* Фон при наведении */
+}
+
+/* Стили для проверки телефона */
+.phone-validation {
+    text-align: center; /* Выравнивание текста по центру */
+    margin: 20px 0; /* Внешний отступ */
+}
+
+#phone-input {
+    padding: 10px; /* Внутренний отступ */
+    font-size: 1em; /* Размер шрифта */
+    margin-bottom: 10px; /* Нижний отступ */
+}
+
+#phone-error {
+    color: red; /* Красный цвет текста */
+}
+
+/* Стили для слайдера */
+.slider {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}

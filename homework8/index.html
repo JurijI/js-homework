@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"> <!-- Кодировка документа -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Устанавливает масштабирование для мобильных устройств -->
+    <meta name="description" content="Пример страницы с семантическими тегами и формой регистрации пользователя"> <!-- Описание страницы -->
+    <title>Семантические теги и регистрация</title> <!-- Заголовок страницы -->
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей -->
+</head>
+<body>
+    <header>
+        <h1>Семантические теги и регистрация пользователя</h1> <!-- Заголовок страницы -->
+    </header>
+
+    <section id="tags-section">
+        <h2>Семантические теги</h2>
+        <div id="tags"></div> <!-- Контейнер для семантических тегов -->
+    </section>
+
+    <section id="registration-form">
+        <h2>Форма регистрации</h2>
+        <!-- Поля для ввода данных пользователя -->
+        <input type="text" id="name" placeholder="Имя" required>
+        <input type="text" id="surname" placeholder="Фамилия" required>
+        <input type="tel" id="phone" placeholder="Телефон" required>
+        <input type="email" id="email" placeholder="Почта" required>
+        <input type="text" id="city" placeholder="Город" required>
+        <button id="save-button">Сохранить</button> <!-- Кнопка для сохранения данных -->
+    </section>
+
+    <div id="cards"></div> <!-- Контейнер для карточек с данными пользователей -->
+
+    <div id="color-divs"></div> <!-- Контейнер для цветных div -->
+
+    <textarea id="text-input" placeholder="Введите текст..."></textarea> <!-- Многократное поле для ввода текста -->
+    <button id="generate-button">Сгенерировать тег</button> <!-- Кнопка для создания нового div -->
+
+    <div id="image-section">
+        <img id="image" src="https://itproger.com/img/courses/1476977240.jpg" alt="Картинка"> <!-- Изображение, которое будет меняться -->
+        <button id="change-image-button">Заменить картинку</button> <!-- Кнопка для смены изображения -->
+    </div>
+
+    <div id="paragraphs-section">
+        <h2>Параграфы</h2>
+        <div id="paragraphs"></div> <!-- Контейнер для параграфов -->
+    </div>
+
+    <script src="code.js"></script> <!-- Подключение файла скриптов -->
+</body>
+</html>
+

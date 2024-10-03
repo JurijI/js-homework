@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif; /* Шрифт для всего документа */
+    margin: 20px; /* Отступы вокруг страницы */
+    padding: 20px; /* Внутренние отступы страницы */
+}
+
+header {
+    background: #f0f0f0; /* Цвет фона для заголовка */
+    padding: 10px; /* Внутренние отступы заголовка */
+}
+
+#tags {
+    margin: 10px 0; /* Отступы для контейнера с тегами */
+}
+
+.tag {
+    display: inline-block; /* Дисплей тегов как блоков */
+    padding: 10px; /* Внутренние отступы для тегов */
+    margin: 5px; /* Внешние отступы между тегами */
+    border: 1px solid #ccc; /* Рамка для тегов */
+    background-color: #e9e9e9; /* Цвет фона для тегов */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+.card {
+    border: 1px solid #ccc; /* Рамка для карточек */
+    padding: 10px; /* Внутренние отступы карточек */
+    margin: 10px 0; /* Внешние отступы карточек */
+}
+
+#color-divs > div {
+    width: 100px; /* Ширина цветных div */
+    height: 100px; /* Высота цветных div */
+    margin: 5px; /* Внешние отступы между цветными div */
+}
+
+#image-section {
+    margin: 20px 0; /* Отступы для секции изображения */
+}
+
+#paragraphs > p {
+    cursor: pointer; /* Курсор при наведении на параграфы */
+}
+

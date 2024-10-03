@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"> <!-- Кодировка документа -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Масштабирование для мобильных устройств -->
+    <meta name="description" content="Программа с секундомером, проверкой телефона и слайдером"> <!-- Описание страницы -->
+    <title>Домашнее задание 9</title> <!-- Заголовок страницы -->
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей -->
+</head>
+<body>
+    <div id="margin-div"></div> <!-- Div с отступом 150 пикселей -->
+    <script>
+        // Выводим в консоль значение внешнего отступа div
+        const marginDiv = document.getElementById('margin-div');
+        console.log(window.getComputedStyle(marginDiv).margin);
+    </script>
+
+    <!-- Секундомер -->
+    <div class="stopwatch">
+        <div id="time-display">00:00:00</div> <!-- Отображение времени -->
+        <button id="start">START</button> <!-- Кнопка старта -->
+        <button id="stop">STOP</button> <!-- Кнопка остановки -->
+        <button id="reset">RESET</button> <!-- Кнопка сброса -->
+    </div>
+
+    <!-- Форма проверки телефона -->
+    <div class="phone-validation">
+        <input type="text" id="phone-input" placeholder="000-000-00-00"> <!-- Поле ввода телефона -->
+        <button id="save-phone">Сохранить</button> <!-- Кнопка сохранения -->
+        <div id="phone-error"></div> <!-- Div для отображения ошибки -->
+    </div>
+
+    <!-- Слайдер -->
+    <div class="slider">
+        <img id="sliderImg" src="https://new-science.ru/wp-content/uploads/2020/03/4848-4.jpg" alt="Slider Image"> <!-- Изображение слайдера -->
+    </div>
+
+    <script src="script.js"></script> <!-- Подключение файла скриптов -->
+</body>
+</html>
+
+
+

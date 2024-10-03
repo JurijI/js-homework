@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции map и checkAge</title>
+</head>
+
+<body>
+    <h1>Результаты выполнения функций</h1>
+    <div id="results"></div>
+
+    <script>
+        // Функция map
+        function map(fn, array) {
+            let result = [];
+            for (let i = 0; i < array.length; i++) {
+                result.push(fn(array[i]));
+            }
+            return result;
+        }
+
+        // Функция для тестирования map
+        function square(x) {
+            return x * x;
+        }
+
+        // Функция checkAge с использованием тернарного оператора
+        function checkAge(age) {
+            return age > 18 ? true : confirm('Родители разрешили?');
+        }
+
+        // Функция checkAge с использованием оператора ||
+        function checkAgeAlt(age) {
+            return age > 18 || confirm('Родители разрешили?');
+        }
+
+        // Пример использования функции map
+        const numbers = [1, 2, 3, 4, 5];
+        const squaredNumbers = map(square, numbers);
+
+        // Ввод возраста пользователем и использование функции checkAge
+        const userAge1 = parseInt(prompt("Введите возраст для проверки через checkAge:"));
+        const ageTest1 = checkAge(userAge1);
+
+        if (!ageTest1) {
+            alert('Операция прервана: возраст меньше 18 лет и нет разрешения родителей.');
+        } else {
+            // Ввод возраста пользователем и использование функции checkAgeAlt
+            const userAge2 = parseInt(prompt("Введите возраст для проверки через checkAgeAlt:"));
+            const ageTest2 = checkAgeAlt(userAge2);
+
+            if (!ageTest2) {
+                alert('Операция прервана: возраст меньше 18 лет и нет разрешения родителей.');
+            } else {
+                // Вывод результатов на страницу
+                document.getElementById('results').innerHTML = `
+                    <h2>Функция map:</h2>
+                    <p>Исходный массив: ${numbers}</p>
+                    <p>Массив после обработки: ${squaredNumbers}</p>
+                    <h2>Функция checkAge:</h2>
+                    <p>Проверка возраста ${userAge1}: ${ageTest1}</p>
+                    <h2>Функция checkAgeAlt:</h2>
+                    <p>Проверка возраста ${userAge2}: ${ageTest2}</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
+
+    
+    
+
+
+
+      /* // Функция map
+        function map(fn, array) {
+            let result = [];
+            for (let i = 0; i < array.length; i++) {
+                result.push(fn(array[i]));
+            }
+            return result;
+        }
+
+        // Пример использования функции map
+        function square(x) {
+            return x * x;
+        }
+
+        let numbers = [1, 2, 3, 4, 5];
+        let squaredNumbers = map(square, numbers);
+        document.write('Квадраты чисел: ' + squaredNumbers.join(', ') + '<br>');
+
+        // Функция checkAge с использованием тернарного оператора
+        function checkAge(age) {
+            return age > 18 ? true : confirm('Родители разрешили?');
+        }
+
+        // Пример использования функции checkAge
+        let age1 = 20;
+        let age2 = 15;
+
+        document.write('Возраст 20: ' + (checkAge(age1) ? 'Допущен' : 'Не допущен') + '<br>');
+        document.write('Возраст 15: ' + (checkAge(age2) ? 'Допущен' : 'Не допущен') + '<br>');
+
+        // Функция checkAge с использованием оператора ||
+        function checkAgeAlt(age) {
+            return age > 18 || confirm('Родители разрешили?');
+        }
+
+        // Пример использования функции checkAgeAlt
+        document.write('Возраст 20 (альтернативная проверка): ' + (checkAgeAlt(age1) ? 'Допущен' : 'Не допущен') + '<br>');
+        document.write('Возраст 15 (альтернативная проверка): ' + (checkAgeAlt(age2) ? 'Допущен' : 'Не допущен') + '<br>');
+        */
+    

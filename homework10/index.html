@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор и ротация баннеров</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Калькулятор -->
+        <div class="calculator">
+             <!-- Экран калькулятора -->
+            <input type="text" class="calculator-screen" value="0" disabled> 
+    <!-- Кнопки памяти -->
+            <div class="calculator-keys">
+                <button class="memory" value="mrc">mrc</button>
+                <button class="memory" value="m-">m-</button>
+                <button class="memory" value="m+">m+</button>
+                <button class="operator" value="/">/</button>
+     <!-- Основные кнопки калькулятора -->
+                <button value="7">7</button>
+                <button value="8">8</button>
+                <button value="9">9</button>
+                <button class="operator" value="*">*</button>
+    
+                <button value="4">4</button>
+                <button value="5">5</button>
+                <button value="6">6</button>
+                <button class="operator" value="-">-</button>
+    
+                <button value="1">1</button>
+                <button value="2">2</button>
+                <button value="3">3</button>
+                <button class="operator" value="+">+</button>
+    
+                <button value="0">0</button>
+                <button value=".">.</button>
+                <button class="all-clear" value="C">C</button>
+                <button class="equals" value="=">=</button>
+            </div>
+        </div>
+
+    <!-- Блок ротации баннеров -->
+    <div class="banner" id="banner"></div>
+    <button id="stopButton">Припинити</button>
+    <button id="resumeButton">Відновити показ</button>
+
+    <!-- Подключаем JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

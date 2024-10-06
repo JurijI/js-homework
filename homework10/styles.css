@@ -1,0 +1,136 @@
+/* Основные стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d5b692; /* Светло-коричневый фон */
+}
+
+/* Стили для калькулятора */
+.calculator {
+    background-color: #554f4f; /* Темно-серый корпус калькулятора */
+    padding: 20px;
+    border-radius: 5px; /* Легкое скругление корпуса */
+    width: 260px; /* Ширина калькулятора */
+    margin-bottom: 20px;
+}
+
+/* Стили для экрана калькулятора */
+.calculator-screen {
+    width: 100%;
+    height: 50px; /* Высота экрана */
+    background-color: #c9db8c; /* Светло-зеленый экран */
+    color: #4a4a4a; /* Темный цвет текста */
+    text-align: right;
+    font-size: 24px; /* Размер шрифта */
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px; /* Скругление экрана */
+}
+
+/* Одинаковые кнопки для всех элементов: память, операторы, цифры */
+button {
+    height: 50px; /* Одинаковая высота кнопок */
+    width: 100%; /* Кнопки занимают 100% ширины ячейки */
+    font-size: 18px; /* Размер шрифта */
+    cursor: pointer;
+    border-radius: 8px; /* Легкое скругление углов у кнопок */
+    border: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.645); /* Тень снизу */
+    transition: background-color 0.3s, box-shadow 0.2s ease-in-out;
+}
+
+/* Сетка для всех кнопок: 5 рядов и 4 столбца */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки для всех кнопок */
+    grid-template-rows: repeat(5, 1fr); /* 5 рядов */
+    grid-gap: 10px;
+}
+
+/* Кнопки памяти */
+.memory-keys {
+    grid-column: span 4; /* Первая строка для кнопок памяти */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки для всех кнопок памяти и операторов */
+}
+
+/* Цвет кнопок памяти */
+.memory-keys button {
+    background-color: #808080; /* Серый цвет */
+    color: white; /* Белый текст */
+}
+
+/* Цвет цифровых кнопок */
+.calculator-keys button {
+    background-color: #3c3a3a; /* Темно-серый цвет для цифровых кнопок */
+    color: white; /* Белый текст */
+}
+
+/* Специальные стили для операторов */
+.operator {
+    background-color: #ff5e74; /* Ярко-розовый цвет для операторов */
+}
+
+.operator:hover {
+    background-color: #ff7b90; /* Светло-розовый при наведении */
+}
+
+/* Специальные стили для кнопки "=" */
+.equals {
+    background-color: #b96e0d; /* Коричневая кнопка для равно */
+}
+
+.equals:hover {
+    background-color: #d07f11; /* Светло-коричневый при наведении */
+}
+
+/* Специальные стили для кнопки очистки */
+.all-clear {
+    background-color: #606060; /* Серый цвет */
+}
+
+.all-clear:hover {
+    background-color: #787878; /* Светло-серый при наведении */
+}
+
+/* Эффект тени для всех кнопок при наведении */
+button:hover {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Тень немного сильнее при наведении */
+}
+
+
+
+
+/* Стили для ротации баннеров */
+.banner {
+    width: 90%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#stopButton, #resumeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 120px; /* Уменьшенная ширина */
+}
+
+#stopButton:hover, #resumeButton:hover {
+    background-color: #0056b3;
+}
